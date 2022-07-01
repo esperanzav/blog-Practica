@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    scroll-behavior: smooth;/*nos permite control el comportamiento del scroll*/
+}
+
+body{
+    font-family:  'Open Sans', sans-serif;
+}
+
+/*MODIFICAMOS TODOS LOS CONTENEDORES DE LA CLASE contenedor*/
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow:hidden; /*todo lo q se desborde que se oculte*/
+    margin: auto; /*margin auto para que lo centre todo*/
+    padding: 60px 0;/*60px arriba y abajo y 0 hacia los lados, para q haya espaciados entre los elementos secciones*/
+}
+
+header{
+    height: 100vh;/*que el header ocupe el 100 overhig que ocupe la pantalla*/
+    background-image: linear-gradient(to right, rgba(219,144,0.5),rgba(11,194,211,0.623),rgba(18, 23, 20, 0.788)), url(../imagen/5.jpg);
+    background-repeat: no-repeat;
+   background-size: cover; /*la centro*/
+   background-attachment: fixed; /*dejo fija la imagen, al hacer scroll*/
+  background-position: center; /*la centro horizontal y vertical, la dejo en el medio*/
+}
+
+/*AHORA MODIFICAREMOS EL TEXTO DEL HEADER*/
+.head{
+    text-align: center;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;/*lo centro*/
+    flex-direction: column;/*utilizamos el display flex y luego esto como el texto estaba alado del otro lo pone arriba y abajo*/
+    color: #fff;
+}
+
+/*MODIFICAMOS EL ICONO*/
+.hamburguer{
+    position: fixed;/*que este fijo en toda la pagina, aunque se haga scroll*/
+   /* z-index: 10;/*esto es porque al darle click en el menu me aparezca */
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;/*muestre la mano*/
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 18, 173, 0.616);/*borde de sombra*/
+}
+
+
+/*MENU DE NAVEGACION*/
+
+.menu-navegacion{
+    position: fixed; 
+    top: 0;
+    right: 0;/*lo mueve hacia la derecha*/
+    width: 30vw;/*30 del archo de la pagina*/
+    height: 100%;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+    display: flex;
+    flex-direction: column;/*para q se pongan uno abajo del otro*/
+    justify-content: space-evenly;/*reparte espacio equitativo*/
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(100%);
+    box-shadow: 0,0, 6px rgba(0, 0 ,0, .5);
+}
+
+.spread{
+    transform: translate(0);
+}
+
+/*modifico los enlaces*/
+
+.menu-navegacion a{
+color: #fff;
+text-decoration: none;/*quita el rayado*/
+}
+
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/*SERVICIO*/
+
+/*moficamos tolos los h2 que tenga la clase subtitulo*/
+.subtitulo{
+    text-align: center;/*lo centra*/
+    font-weight: 300;
+    color: #9f8ad0;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+/*modificamos el area de nuestro servicio*/
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;/*lo pasa abajo*/
+}
+
+/*modificamos la imagen del contenedor servicio*/
+.contenedor-servicio img{
+width: 40%;
+}
+
+.checklist-servicio{
+    width: 45;
+}
+
+/*modificamos el div con la clase service de los textos*/
+.service{
+    margin-bottom: 20px;
+}
+/*mofificamos los h3 con la clase n-service*/
+.n-service{
+margin-bottom: 7px;
+color:#9f8ad0;
+}
+
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;/*para que lo rendondee*/
+    font-weight: 700;
+    line-height: 30px;/*para que lo centre verticamente igual*/
+    margin-right: 5px;
+}
+
+/*mofificamos la GALERIA*/
+
+.galley{
+    background: #99ebcd;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria{
+object-fit:cover ;
+width: 30%;
+display: block;
+margin-bottom: 15px;
+border-bottom: 0 0 6px rgba(0, 0 ,0, .5);
+cursor: pointer;/*se pone la manita*/
+}
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0 ,0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);/*para ocultarlo*/
+    transition: transform .2s ease-in-out;
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen {  /*la imagen q esta dentro del contenedor*/
+object-fit: cover;
+width: 60%;
+border-radius: 10px;
+transform: scale(0);
+transition: transform .3s .2s;
+}
+ .showImage{/*clase extra se va agregar al darle clic a la imagen*/
+ transform: scale (1);                                              
+ }
+
+
+.close{/*icono close*/
+position: absolute;
+top:15px;
+width: 40px;
+cursor: pointer;
+} 
+
+/*EXPERTOS*/
+.experts{/*la caja donde contiene la imagen crero*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;/*esto es por si no caben la imagen q lo baje*/
+}
+
+.cont-expert{
+width: 30%;
+text-align: center;
+margin-top: 20px;
+}
+
+.cont-expert img{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.n-xpert{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;;
+}
+
+/*FOOTER*/
+
+footer{
+    background: #00c9ff;
+    padding-bottom: 0.1px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px ;
+}
+
+.contac-us{
+    width: 40%;
+    color: #fff;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+    color: #fff;
+}
+.brand+p{
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;;
+}
+
+.social-media{ /*caja de iconos*/
+width: 50%;
+display: flex;
+justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 3px solid #fff;
+    text-align: center;
+    color: rgb(193, 27, 231);
+    border-radius: 50%;
+}
+
+.social-media-icon:hover{
+    background:#fff;
+    color:#764ba2;
+}
+
+.social-media-icon i{
+    font-size: 20px;
+    line-height: 60px;
+}
+
+
+
+.line{
+    width: 90%;
+    max-width: 1200;
+    margin: 0 auto;
+    height: 4px;
+    background: #764ba2;
+    margin-bottom: 60px;
+}
+
+@media screen and(max-width:800px){
+    .menu-navegacion{
+        width: 50vw;
+    }
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor-servicio img{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .checklist-servicio{
+        width: 80%;
+    }
+    .service{
+        margin-bottom: 30px;
+    }
+    .agregar-imagen{
+        width: 80%;
+    }
+    .img-galeria{
+        width: 45%;/*para que las imagenes se coloquen 2 por filas*/
+    }
+    .cont-expert{
+        width: 80%;/*ara q coloques las imagenes una abajo de la otra*/
+    }
+
+    .footer-content{
+     justify-content: center;
+    }
+
+    .social-media{/*posiciona los iconos abajo*/
+   
+        width: 80%;
+        justify-content: space-evenly;/*lo separa un poco*/
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+    .social-media i{
+        margin-left: 0;
+    }
+
+    .contac-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and(max-width:500px){
+ .menu-navegacion{/*no se agrando el menu*/
+    width: 65vw;
+ }
+ .hamburguer{
+    top: 20px;
+    right: 20px;
+ }
+.titulo{
+font-size: 30px;
+}
+.subtitulo{
+    font-size: 30px;
+}
+.agregar-imagen{/*no se agranado la imagen*/
+    width: 95%;
+}
+.img-galeria{/*con esto deberia ser una debajo de la otra*/
+    width: 95%;
+}
+.social-media{
+    width: 100%;
+}
+
+.contac-us{
+    width: 90%;
+}
+}

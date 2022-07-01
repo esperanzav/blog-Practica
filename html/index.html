@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'><!--link de los icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header" id="inicio"> 
+
+        <img src="/imagen/hamburguesa.svg"class="hamburguer">
+
+        <nav class="menu-navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicio">Servicio</a>
+            <a href="#portafolio">Porafolio</a>
+            <a href="#expertos">Expertos</a>
+            <a href="#contactos">Contacto</a>
+             </nav>
+
+             <div class="contenedor head"><!--contenedor del texto-->
+              <h1 class="titulo">convertimos tus sueños en realidad</h1>
+              <p class="copy">Nunca dejes de intentar el èxito casi nunca viene en el primer intento</p>
+             </div>
+    
+    </header>
+    
+    <main><!--todo el contenido principal va aqui-->
+
+        <section class="contenedor" id="servicio"><!--SERVICIO-->
+            <H2 class="subtitulo">Nuestro Servicio</H2>
+            <div class="contenedor-servicio">
+             <img src="/imagen/isometric.png" alt="isometrica">
+               <div class="checklist-servicio">
+
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Diseño Web</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam est expedita ratione consectetur modi perferendis similique quibusdam, fugit natus? Corporis dignissimos, excepturi nesciunt consectetur deserunt autem numquam inventore corrupti?
+                        </p>
+                    </div>
+                      
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">2</span>Diseño Web</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam est expedita ratione consectetur modi perferendis similique quibusdam, fugit natus? Corporis dignissimos, excepturi nesciunt consectetur deserunt autem numquam inventore corrupti?
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Diseño Web</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam est expedita ratione consectetur modi perferendis similique quibusdam, fugit natus? Corporis dignissimos, excepturi nesciunt consectetur deserunt autem numquam inventore corrupti?
+                        </p>
+                    </div>
+
+               </div>
+            </div>
+        </section>
+        
+
+     <section class="galley" id="portafolio"><!--PORTAFOLIO-->
+       <div class="contenedor">
+             <H2 class="subtitulo">Galeria</H2>
+             <div class="contenedor-galeria">
+                <img src="/imagen/5.jpg" alt="" class="img-galeria">
+                <img src="/imagen/1.jpg" alt="" class="img-galeria">
+                <img src="/imagen/100.jpg" alt="" class="img-galeria">
+                <img src="/imagen/2.jpg" alt="" class="img-galeria">
+                <img src="/imagen/3.jpg" alt="" class="img-galeria">
+                <img src="/imagen/5.jpg" alt="" class="img-galeria">
+
+             </div>
+
+       </div>
+
+     </section>
+
+     
+      <section class="imagen-light show"> <!--esto es el closer X, esta seccion va a generar el efecto ligbox-->
+       <img class="close" src="/imagen/bx-x.svg" alt="">
+            <img src="/imagen/4.jpg" alt="" class="agregar-imagen showImage">
+        </section> 
+
+
+     <section class="contenedor" id="expertos"> <!--EXÈRTOS-->
+        <h2 class="subtitulo">Expertos en:</h2>
+          <section class="experts">
+              <div class="cont-expert">
+                <img src="/imagen/Online.png" alt="">
+                <h3 class="n-xpert">Analitics</h3>
+
+              </div>
+
+              <div class="cont-expert">
+                <img src="/imagen/email.png" alt="">
+                <h3 class="n-xpert">CEO</h3>
+              </div>
+
+
+              <div class="cont-expert">
+                <img src="/imagen/linkedin.png" alt="">
+                <h3 class="n-xpert">Security</h3>
+
+              </div>
+          </section>
+
+     </section>
+
+    
+    </main>
+
+
+
+    <footer id="contacto"><!--FOOTER-->
+      <div class=" contenedor footer-content">
+          <div class="contact-us">
+            <h2 class="brand">fresh-Marc</h2>
+            <p> Somos expertos en la creacion de tus sueños</p>
+          </div>
+       
+
+          <div class="social-media">
+            <a href="./" class="social-media-icon">
+                <i class='bx bxl-facebook'></i><!--las copie como fuentes-->
+            </a>
+
+             
+            <a href="./" class="social-media-icon">
+                <i class='bx bxl-twitter'></i>
+            </a>
+
+
+            <a href="./" class="social-media-icon">
+                <i class='bx bxl-instagram'></i>
+            </a>
+   
+           
+            <a href="./" class="social-media-icon">
+                 <i class='bx bxl-linkedin-square' ></i>
+            </a>
+
+          </div>
+      </div>
+      <div class="line"></div>
+    </footer>
+   
+    <script src="/js/ligtbox.js"></script>
+    <script src="/js/menu.js"></script>
+
+  
+</body>
+</html>
