@@ -23,7 +23,7 @@ body{
 
 header{
     height: 100vh;/*que el header ocupe el 100 overhig que ocupe la pantalla*/
-    background-image: linear-gradient(to right, rgba(219,144,0.5),rgba(11,194,211,0.623),rgba(18, 23, 20, 0.788)), url(../imagen/5.jpg);
+    background-image: linear-gradient(to right, rgba(219,144,0.5),rgba(11,194,211,0.623),rgba(18, 23, 20, 0.788)), url(../imagen/1.jpg);
     background-repeat: no-repeat;
    background-size: cover; /*la centro*/
    background-attachment: fixed; /*dejo fija la imagen, al hacer scroll*/
@@ -191,7 +191,7 @@ cursor: pointer;/*se pone la manita*/
 object-fit: cover;
 width: 60%;
 border-radius: 10px;
-transform: scale(0);
+transform: scale(1);
 transition: transform .3s .2s;
 }
  .showImage{/*clase extra se va agregar al darle clic a la imagen*/
@@ -333,14 +333,13 @@ justify-content: flex-end;
     }
 
     .social-media{/*posiciona los iconos abajo*/
-   
         width: 80%;
         justify-content: space-evenly;/*lo separa un poco*/
     }
 
-    .social-media-icon{
+   /* .social-media-icon{
         margin-left: 0;
-    }
+    }*/
     .social-media i{
         margin-left: 0;
     }
