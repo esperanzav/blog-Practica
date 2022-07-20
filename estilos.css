@@ -23,7 +23,7 @@ body{
 
 header{
     height: 100vh;/*que el header ocupe el 100 overhig que ocupe la pantalla*/
-    background-image: linear-gradient(to right, rgba(219,144,0.5),rgba(11,194,211,0.623),rgba(18, 23, 20, 0.788)), url(../imagen/1.jpg);
+    background-image: linear-gradient(to right, rgba(219,144,0.5),rgba(11,194,211,0.623),rgba(18, 23, 20, 0.788)), url(1.jpg);
     background-repeat: no-repeat;
    background-size: cover; /*la centro*/
    background-attachment: fixed; /*dejo fija la imagen, al hacer scroll*/
